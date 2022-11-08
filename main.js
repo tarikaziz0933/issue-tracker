@@ -30,7 +30,7 @@ const setStatusClosed = id => {
   // console.log(issues);
   // let currentIssue = issues.find(issue => issue.id === id);
   // console.log(currentIssue);
-  const currentIssue = issues.find(issue => issue.id == id);
+  const currentIssue = issues.find(issue => issue.id === id);
   currentIssue.status = 'Closed';
   localStorage.setItem('issues', JSON.stringify(issues));
   fetchIssues();
