@@ -8,6 +8,10 @@ function submitIssue(e) {
   const id = parseInt(Math.floor(Math.random() * 100000000) + '');
   let status = 'Open';
 
+  if (description == '' || assignedTo == '') {
+    alert('Please Fill Boxes');
+    return;
+  }
   const issue = { id, description, severity, assignedTo, status };
   let issues = [];
   if (localStorage.getItem('issues')) {
